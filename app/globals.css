@@ -1,27 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 35, 31, 31;
+  --background-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-rgb: 35, 31, 31;
+  }
+}
+* {
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+body {
+  color: rgb(var(--foreground-rgb));
+}
+/*navbar */
+.nav-container {
+  background: rgb(var(--background-rgb));
+  padding-inline-start: 3vw;
+  padding-inline-end: 3vw;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid rgb(var(--foreground-rgb));
+}
+.nav-links {
+
+}
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3vw;
+  padding: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  height: 2.5rem;
+  font-size: 18px;
+  background: transparent;
+  border-radius: .375rem;
+  transition: all 250ms ease 0s;
+}
+.nav-link:hover {
+  background: rgba(var(--foreground-rgb), .18);
+}
+/*sidebar */
+.bm-menu {
+  background-color: #333;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 1em;
+  display: block;
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 32px;
+  height: 27px;
+  right: 24px;
+  top: 16px;
+}
+
+@media (min-width: 400px) {
+  .bm-burger-button {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .nav-link {
+    display: none;
   }
 }
 
-body {
+.bm-burger-bars {
+  background: #fff;
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu .bm-item-list .bm-item:before {
+  background-color: #fff;
+}
+
+.bm-menu .bm-cross-button {
+  right: 36px;
+  top: 36px;
+  height: 24px;
+  width: 24px;
+}
+
+/*background*/
+
+#tsparticles > canvas {
+  margin-top: 64px;
+}
+
+.page {
+  background-color: rgb(var(--background-rgb));
+  min-height: calc(100vh - 65px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.content > h1 {
+  font-weight: 600;
+  font-size: 48px;
+}
+@media (max-width: 300px) {
+  .content > h1 {
+    font-size: 42px;
+  }
+}
+.sec-head {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+.links-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.links-container > a {
+  padding: .35rem;
+  border-radius: .25rem;
+}
+.links-container > a,
+.links-container > a > svg {
+  transition: all .4s ease 0s;
+}
+.links-container > a:hover {
+  background: rgb(var(--foreground-rgb));
+}
+.links-container > a:hover > svg {
+  fill: rgb(var(--background-rgb));
 }
