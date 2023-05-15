@@ -4,7 +4,7 @@ import {stack as Menu} from 'react-burger-menu';
 import {DarkModeSwitch} from "react-toggle-dark-mode";
 import {useTheme} from "next-themes";
 import Link from "next/link";
-import {NoSSR} from "next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr";
+import NoSSR from "../components/no-ssr";
 
 const RightSidebar = () => {
 

@@ -12,21 +12,6 @@ const Page = () => {
           <p>I enjoy building projects and practicing my engineering skills. I have an archive of the things I&apos;ve worked on as a way to showcase my progress and experience.</p>
         </div>
         <div className={"projects-main"}>
-          {/*<ProjectCard*/}
-          {/*  image={"as"}*/}
-          {/*  title={"Just Anime"}*/}
-          {/*  githubLink={"github.com"}*/}
-          {/*  link={"github.com"}*/}
-          {/*  technologiesUsed={["React", "Django"]}*/}
-          {/*  description={"Description"}*/}
-          {/*/>*/}
-          {/*<ProjectCard*/}
-          {/*  image={"as"}*/}
-          {/*  title={"Just Anime2222"}*/}
-          {/*  githubLink={"github.com"}*/}
-          {/*  technologiesUsed={["React", "Django"]}*/}
-          {/*  description={"Description"}*/}
-          {/*/>*/}
           {data.map(project => <ProjectCard
               key={project.title}
               image={project.image}

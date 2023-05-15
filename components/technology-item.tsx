@@ -4,7 +4,7 @@ import { FaReact, FaVuejs, FaPhp } from 'react-icons/fa';
 import { SiDjango, SiTypescript, SiNextdotjs, SiNodedotjs } from 'react-icons/si';
 import {IconType} from "react-icons";
 import {useTheme} from "next-themes";
-import {NoSSR} from "next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr";
+import NoSSR from "../components/no-ssr";
 
 interface Technology {
   icon: IconType

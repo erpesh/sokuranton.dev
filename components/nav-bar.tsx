@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useTheme } from 'next-themes'
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import {NoSSR} from "next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr";
+import NoSSR from "../components/no-ssr";
 
 const NavBar = () => {
 
