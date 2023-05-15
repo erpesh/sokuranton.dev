@@ -5,7 +5,7 @@ import { loadFull } from "tsparticles";
 import {Engine} from "tsparticles-engine";
 import {useTheme} from "next-themes";
 
-const getOptions = (theme: string | undefined) => {
+const getOptions = (theme: string | undefined, fullScreen: boolean = false) => {
 
   let color = "#000000";
   if (theme === "dark") color = "#ffffff";
@@ -55,7 +55,7 @@ const getOptions = (theme: string | undefined) => {
         directions: "none",
         enable: true,
         outModes: {
-          default: "bounce",
+          default: "bounce", // "out"
         },
         random: false,
         speed: 3,
@@ -79,10 +79,17 @@ const getOptions = (theme: string | undefined) => {
       },
     },
     detectRetina: true,
+    fullScreen: {
+      enable: fullScreen
+    }
   }
 }
 
-const ParticlesBackground = () => {
+interface Props {
+  fullScreen: boolean
+}
+
+const ParticlesBackground = ({fullScreen} : Props) => {
 
   const { theme, setTheme } = useTheme();
 
@@ -90,10 +97,13 @@ const ParticlesBackground = () => {
     await loadFull(main);
   };
 
-
-
   return (
-      <Particles init={particlesInit} options={getOptions(theme)} />
+      <Particles
+        init={particlesInit}
+        options={getOptions(theme, fullScreen)}
+        className={fullScreen ? "" : "container-bg"}
+        canvasClassName={fullScreen ? "tsparticles-full-screen" : ""}
+      />
   );
 
 };

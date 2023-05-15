@@ -4,7 +4,7 @@ import ParticlesBackground from "../components/particles-background";
 const Page = () => {
   return (
     <div className={"page"}>
-      <ParticlesBackground/>
+      <ParticlesBackground fullScreen />
       <div className="content">
         <h1>Anton Sokur</h1>
         <span className={"sec-head"}>Software Engineer, Web Developer, University Student</span>

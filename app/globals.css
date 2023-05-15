@@ -6,14 +6,16 @@
 
 :root {
   --foreground-rgb: 35, 31, 31;
-  --foreground: #231F1F;
+  --foreground: #000000;
   --background: #ffffff;
+  --background-secondary: #dedbdb;
 }
 
 [data-theme='dark'] {
   --foreground-rgb: 255, 255, 255;
   --foreground: #ffffff;
-  --background: #231F1F;
+  --background: #000000;
+  --background-secondary: #231F1F;
 }
 
 /*[data-theme='green'] {*/
@@ -150,17 +152,70 @@ body {
 
 /*background*/
 
-#tsparticles > canvas {
+.tsparticles-full-screen {
+  margin-top: 64px;
+}
+.tsparticles-projects-page {
   margin-top: 64px;
 }
 
+.container-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+/*projects page */
+
 .page {
+  position: relative;
   background-color: var(--background);
-  min-height: calc(100vh - 65px);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: calc(100vh - 65px);
+}
+.projects-content {
+  max-width: 1000px;
+  width: 100%;
+  background: transparent;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (max-width: 400px) {
+  .projects-content{
+    padding: 0 .5rem;
+  }
+}
+.projects-head {
+  font-weight: 600;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--foreground);
+}
+.projects-head > h1 {
+  font-size: 60px;
+}
+.projects-head > p {
+  font-size: 20px;
+}
+.projects-main {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+@media (max-width: 665px){
+  .projects-main {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
 }
 .content {
   color: var(--foreground);
@@ -208,4 +263,83 @@ body {
 }
 .links-container > a:hover > svg {
   fill: var(--background);
+}
+
+/*project card*/
+.card-container {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--background-secondary);
+}
+.card-image > img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.card-info-container {
+  padding: .5rem 1rem;
+}
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+}
+.card-title > p {
+  font-size: 24px;
+  font-weight: 600;
+}
+.card-link {
+  display: flex;
+  align-items: center;
+}
+.description {
+  margin-top: .5rem;
+}
+.card-tech {
+  border-bottom: 1px solid var(--foreground);
+  padding: .15rem 0 .5rem;
+  display: flex;
+  column-gap: 1rem;
+  row-gap: .5rem;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: .375rem;
+  border-radius: .375rem;
+  padding: 2px 6px;
+  /*border: 1px solid var(--foreground);*/
+}
+/* React */
+.react {
+  color: rgb(144, 205, 244);
+  background-color: rgba(144, 205, 244, 0.16);
+}
+/* Django */
+.django {
+  color: rgb(0, 91, 150);
+  background-color: rgba(0, 91, 150, 0.16);
+}
+/* Vue */
+.vue {
+  color: rgb(65, 184, 131);
+  background-color: rgba(65, 184, 131, 0.16);
+}
+/* TypeScript */
+.typescript {
+  color: rgb(0, 122, 204);
+  background-color: rgba(0, 122, 204, 0.16);
+}
+/* Next.js */
+.nextjs {
+  color: rgb(226, 232, 240);
+  background-color: rgba(226, 232, 240, 0.16);
+}
+/* PHP */
+.php {
+  color: rgb(79, 93, 149);
+  background-color: rgba(79, 93, 149, 0.16);
 }
