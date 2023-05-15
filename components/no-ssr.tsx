@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
-const DefaultOnSSR = () => <span></span>;
 
-const NoSSR = ({ children, onSSR = <DefaultOnSSR /> }) => {
+const NoSSR = ({ children }) => {
   const [canRender, setCanRender] = useState(false);
 
   useEffect(() => {
     setCanRender(true);
   }, []);
 
-  return canRender ? children : onSSR;
+  if (!canRender) return null;
+
+  return children;
 };
 
 export default NoSSR;

@@ -28,8 +28,8 @@ const RightSidebar = () => {
               onChange={(checked) => {}}
               size={24}
             />
+            <span>{theme === "dark" ? "Dark" : "Light"}</span>
           </NoSSR>
-          <span>{theme === "dark" ? "Dark" : "Light"}</span>
         </span>
       </Menu>
   );
