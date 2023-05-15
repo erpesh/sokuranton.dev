@@ -9,7 +9,7 @@ const Page = () => {
       <div className={"projects-content"}>
         <div className={"projects-head"}>
           <h1>Projects</h1>
-          <p>I love building projects and practice my engineering skills, here&apos;s an archive of things that I&apos;ve worked on.</p>
+          <p>I enjoy building projects and practicing my engineering skills. I have an archive of the things I&apos;ve worked on as a way to showcase my progress and experience.</p>
         </div>
         <div className={"projects-main"}>
           {/*<ProjectCard*/}
