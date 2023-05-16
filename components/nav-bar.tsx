@@ -10,8 +10,8 @@ const NavBar = () => {
   const {theme, setTheme} = useTheme();
 
   return (
-    <nav className={"flex justify-between nav-container"}>
-      <p className={"inline-flex items-center justify-center cursor-pointer font-bold text-2xl"}>Anton Sokur</p>
+    <nav className={"nav-container"}>
+      <Link href={"/"} className={"inline-flex items-center justify-center cursor-pointer font-bold text-2xl"}>Anton Sokur</Link>
       <div className={"nav-links"}>
         <Link className={"nav-link"} href={"/"}>Home</Link>
         <Link className={"nav-link"} href={"/projects"}>Projects</Link>

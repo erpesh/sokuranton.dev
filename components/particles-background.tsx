@@ -58,7 +58,7 @@ const getOptions = (theme: string | undefined, fullScreen: boolean = false) => {
           default: "bounce", // "out"
         },
         random: false,
-        speed: 3,
+        speed: 2,
         straight: false,
       },
       number: {
@@ -66,7 +66,7 @@ const getOptions = (theme: string | undefined, fullScreen: boolean = false) => {
           enable: true,
           area: 800,
         },
-        value: 80,
+        value: 50,
       },
       opacity: {
         value: 0.5,
@@ -75,7 +75,7 @@ const getOptions = (theme: string | undefined, fullScreen: boolean = false) => {
         type: "circle",
       },
       size: {
-        value: {min: 1, max: 5},
+        value: {min: 1, max: 3},
       },
     },
     detectRetina: true,

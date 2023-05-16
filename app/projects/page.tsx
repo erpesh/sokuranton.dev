@@ -12,16 +12,7 @@ const Page = () => {
           <p>I enjoy building projects and practicing my engineering skills. I have an archive of the things I&apos;ve worked on as a way to showcase my progress and experience.</p>
         </div>
         <div className={"projects-main"}>
-          {data.map(project => <ProjectCard
-              key={project.title}
-              image={project.image}
-              title={project.title}
-              githubLink={project.githubLink}
-              link={project.link}
-              technologiesUsed={project.technologiesUsed}
-              description={project.description}
-            />
-          )}
+          {data.map(project => <ProjectCard key={project.title} project={project}/>)}
         </div>
       </div>
     </div>

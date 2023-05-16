@@ -7,8 +7,8 @@ const Page = () => {
       <ParticlesBackground fullScreen />
       <div className="content">
         <h1>Anton Sokur</h1>
-        <span className={"sec-head"}>Software Engineer, Web Developer, University Student</span>
-        <div className={"links-container"}>
+        <span className={"sec-head"}><span>Software Engineer,</span><span>Web Developer,</span><span>University Student</span></span>
+        <div className={"links-container gap-4 mt-4"}>
           <a target="_blank" href="https://t.me/erpesh" rel="noopener noreferrer">
             <FaTelegramPlane size={32}/>
           </a>

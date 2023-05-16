@@ -1,23 +1,33 @@
 "use client"; // This is a client component 👈🏽
 
 import { FaReact, FaVuejs, FaPhp } from 'react-icons/fa';
-import { SiDjango, SiTypescript, SiNextdotjs, SiNodedotjs } from 'react-icons/si';
+import {
+  SiDjango,
+  SiTypescript,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiFirebase,
+  SiCsharp,
+  SiSupabase, SiStripe
+} from 'react-icons/si';
 import {IconType} from "react-icons";
 import {useTheme} from "next-themes";
 import NoSSR from "../components/no-ssr";
+import {Technology} from "../projects/data";
 
-interface Technology {
+interface ITechnology {
   icon: IconType
   lightColor: string
   darkColor: string
   size?: number
 }
 
-const technologies = {
+const technologies: Record<Technology, ITechnology> = {
   "React" : {
     icon: FaReact,
     lightColor: "#90cdf4",
-    darkColor: "#2563EB",
+    darkColor: "#1d50b9",
   },
   "Django": {
     icon: SiDjango,
@@ -43,12 +53,37 @@ const technologies = {
     icon: FaPhp,
     lightColor: "#caa5f3",
     darkColor: "#4D588E",
-    size: 24,
+    size: 21,
   },
   "Node.js": {
     icon: SiNodedotjs,
     lightColor: "#8CC84B",
     darkColor: "#314D35",
+  },
+  "PostgreSQL": {
+    icon: SiPostgresql,
+    lightColor: "#00bfff",
+    darkColor: "#1F2937",
+  },
+  "Firebase": {
+    icon: SiFirebase,
+    lightColor: "#FFCB2B",
+    darkColor: "#242424",
+  },
+  "C#": {
+    icon: SiCsharp,
+    lightColor: "#9B4F96",
+    darkColor: "#171717",
+  },
+  "Supabase": {
+    icon: SiSupabase,
+    lightColor: "#44CF93",
+    darkColor: "#333333",
+  },
+  "Stripe": {
+    icon: SiStripe,
+    lightColor: "#6772E5",
+    darkColor: "#1F2937",
   },
 };
 
@@ -59,7 +94,7 @@ interface Props {
 
 const TechnologyItem = ({tech} : Props) => {
 
-  const technology = technologies[tech] as Technology;
+  const technology = technologies[tech];
   const TechnologyIcon = technology.icon;
 
   const {theme, setTheme} = useTheme();
