@@ -2,7 +2,7 @@
 
 import { FaReact, FaVuejs, FaPhp } from 'react-icons/fa';
 import {
-  SiDjango,
+  SiPython,
   SiTypescript,
   SiNextdotjs,
   SiNodedotjs,
@@ -29,8 +29,8 @@ const technologies: Record<Technology, ITechnology> = {
     lightColor: "#90cdf4",
     darkColor: "#1d50b9",
   },
-  "Django": {
-    icon: SiDjango,
+  "Python": {
+    icon: SiPython,
     lightColor: "#00bfff",
     darkColor: "#1F2937",
   },
@@ -60,20 +60,10 @@ const technologies: Record<Technology, ITechnology> = {
     lightColor: "#8CC84B",
     darkColor: "#314D35",
   },
-  "PostgreSQL": {
-    icon: SiPostgresql,
-    lightColor: "#00bfff",
-    darkColor: "#1F2937",
-  },
   "Firebase": {
     icon: SiFirebase,
     lightColor: "#FFCB2B",
     darkColor: "#242424",
-  },
-  "C#": {
-    icon: SiCsharp,
-    lightColor: "#9B4F96",
-    darkColor: "#171717",
   },
   "Supabase": {
     icon: SiSupabase,

@@ -58,7 +58,7 @@ const getOptions = (theme: string | undefined, fullScreen: boolean = false) => {
           default: "bounce", // "out"
         },
         random: false,
-        speed: 2,
+        speed: 3,
         straight: false,
       },
       number: {
