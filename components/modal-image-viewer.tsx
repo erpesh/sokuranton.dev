@@ -1,7 +1,7 @@
 "use client";
 
-import {useEffect, useState} from 'react';
-import {FaChevronLeft, FaChevronRight, FaImages} from 'react-icons/fa';
+import {useEffect, useState, TouchEvent} from 'react';
+import {FaChevronLeft, FaChevronRight} from 'react-icons/fa';
 import Image from "next/image";
 import {AiOutlineClose} from "react-icons/all";
 
@@ -36,6 +36,31 @@ const ModalImageViewer = ({images, isOpen, close}: ModalImageViewerProps) => {
     }
   };
 
+  let startX: number | null = null;
+
+  const handleTouchStart = (event: TouchEvent<HTMLDivElement>) => {
+    startX = event.changedTouches[0].clientX;
+  };
+
+  const handleTouchEnd = (event: TouchEvent<HTMLDivElement>) => {
+    if (startX !== null) {
+      const endX = event.changedTouches[0].clientX;
+      const deltaX = endX - startX;
+
+      if (deltaX > 50) {
+        // Swiped right
+        setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+      } else if (deltaX < -50) {
+        // Swiped left
+        setCurrentImageIndex((prevIndex) =>
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+      }
+
+      startX = null;
+    }
+  };
+
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
 
@@ -55,7 +80,11 @@ const ModalImageViewer = ({images, isOpen, close}: ModalImageViewerProps) => {
         <div className={"close-viewer"} onClick={close}>
           <AiOutlineClose size={36}/>
         </div>
-        <div className="image-viewer-content">
+        <div
+          className="image-viewer-content"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           {images.length > 1 ? <>
             <div className="nav-btn-desk prev-btn" onClick={handlePrevImage}>
               <FaChevronLeft className="icon" size={36}/>
