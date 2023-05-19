@@ -1,10 +1,14 @@
 import ParticlesBackground from "../../components/particles-background";
 import ProjectCard from "../../components/project-card";
 import data from "../../projects/data";
+import Head from "next/head";
 
 const Page = () => {
   return (
     <div className={"page"}>
+      <Head>
+        <title>Projects | Anton Sokur</title>
+      </Head>
       <ParticlesBackground fullScreen={false}/>
       <div className={"projects-content"}>
         <div className={"projects-head"}>

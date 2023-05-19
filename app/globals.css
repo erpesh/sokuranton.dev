@@ -393,7 +393,16 @@ body {
   margin-right: auto;
   border-radius: 0.5rem;
 }
-
+@media (max-width: 1370px) {
+  .image-view-container {
+    max-width: 1000px;
+  }
+}
+@media (max-width: 1150px) {
+  .image-view-container {
+    max-width: 950px;
+  }
+}
 .image-viewer-content {
   position: relative;
   display: flex;
@@ -407,13 +416,13 @@ body {
 .nav-btn-mob {
   margin: 0 1rem;
   cursor: pointer;
+  z-index: 100;
 }
 .nav-btn-desk {
   color: white;
 }
 .nav-btn-mob {
   color: var(--foreground);
-  z-index: 100;
 }
 .icon {
   font-size: 1.5rem;
@@ -422,7 +431,6 @@ body {
 
 .image-view {
   border-radius: 0.5rem;
-  width: 100%;
 }
 .close-viewer {
   display: none;

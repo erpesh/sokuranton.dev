@@ -1,9 +1,13 @@
 import { FaGithub, FaTelegramPlane, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import ParticlesBackground from "../components/particles-background";
+import Head from "next/head";
 
 const Page = () => {
   return (
     <div className={"page"}>
+      <Head>
+        <title>Home | Anton Sokur</title>
+      </Head>
       <ParticlesBackground fullScreen />
       <div className="content">
         <h1>Anton Sokur</h1>
