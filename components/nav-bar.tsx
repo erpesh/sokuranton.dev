@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useTheme } from 'next-themes'
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import NoSSR from "../components/no-ssr";
+import RenderOnMount from "./render-on-mount";
 
 const NavBar = () => {
 
@@ -19,13 +19,13 @@ const NavBar = () => {
           className={"color-theme-switch"}
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-          <NoSSR>
+          <RenderOnMount>
             <DarkModeSwitch
               checked={theme === "dark"}
-              onChange={(checked) => {}}
+              onChange={() => {}}
               size={24}
             />
-          </NoSSR>
+          </RenderOnMount>
         </span>
       </div>
     </nav>

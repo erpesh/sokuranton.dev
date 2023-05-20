@@ -6,14 +6,13 @@ import {
   SiTypescript,
   SiNextdotjs,
   SiNodedotjs,
-  SiPostgresql,
   SiFirebase,
-  SiCsharp,
-  SiSupabase, SiStripe
+  SiSupabase,
+  SiStripe
 } from 'react-icons/si';
 import {IconType} from "react-icons";
 import {useTheme} from "next-themes";
-import NoSSR from "../components/no-ssr";
+import RenderOnMount from "./render-on-mount";
 import {Technology} from "../projects/data";
 
 interface ITechnology {
@@ -90,7 +89,7 @@ const TechnologyItem = ({tech} : Props) => {
   const {theme, setTheme} = useTheme();
 
   return (
-    <NoSSR>
+    <RenderOnMount>
         <span className={"tech-item"} style={{
           backgroundColor: theme === "dark" ? technology.lightColor : technology.darkColor,
           color: theme === "dark" ? technology.darkColor : technology.lightColor
@@ -98,7 +97,7 @@ const TechnologyItem = ({tech} : Props) => {
           <TechnologyIcon size={technology.size ?? 16}/>
         <span>{tech}</span>
       </span>
-    </NoSSR>
+    </RenderOnMount>
   );
 };
 

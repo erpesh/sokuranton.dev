@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-const NoSSR = ({ children }) => {
+const RenderOnMount = ({ children }) => {
   const [canRender, setCanRender] = useState(false);
 
   useEffect(() => {
@@ -13,4 +13,4 @@ const NoSSR = ({ children }) => {
   return children;
 };
 
-export default NoSSR;
+export default RenderOnMount;
