@@ -37,13 +37,19 @@ const ModalImageViewer = ({images, isOpen, close}: ModalImageViewerProps) => {
   };
 
   let startX: number | null = null;
+  let isZooming = false;
 
   const handleTouchStart = (event: TouchEvent<HTMLDivElement>) => {
     startX = event.changedTouches[0].clientX;
+    isZooming = false;
+  };
+
+  const handleTouchMove = () => {
+    isZooming = true;
   };
 
   const handleTouchEnd = (event: TouchEvent<HTMLDivElement>) => {
-    if (startX !== null) {
+    if (!isZooming && startX !== null) {
       const endX = event.changedTouches[0].clientX;
       const deltaX = endX - startX;
 
@@ -58,6 +64,7 @@ const ModalImageViewer = ({images, isOpen, close}: ModalImageViewerProps) => {
       }
 
       startX = null;
+      isZooming = false;
     }
   };
 
@@ -84,6 +91,7 @@ const ModalImageViewer = ({images, isOpen, close}: ModalImageViewerProps) => {
           className="image-viewer-content"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
+          onTouchMove={handleTouchMove}
         >
           {images.length > 1 ? <>
             <div className="nav-btn-desk prev-btn" onClick={handlePrevImage}>
