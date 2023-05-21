@@ -1,15 +1,15 @@
 import justAnime from '../projects/images/just-anime.jpg';
 import reactChess from "../projects/images/react-chess1.png";
-import quizletClone1 from "../projects/images/quizlet-clone1.jpg";
-import quizletClone2 from "../projects/images/quizlet-clone2.jpg";
-import quizletClone3 from "../projects/images/quizlet-clone3.jpg";
-import quizletClone4 from "../projects/images/quizlet-clone4.jpg";
-import quizletClone5 from "../projects/images/quizlet-clone5.jpg";
-import quizletClone6 from "../projects/images/quizlet-clone6.jpg";
-import quizletClone7 from "../projects/images/quizlet-clone7.jpg";
-import sokurAppointment1 from "../projects/images/sokur-appointment1.jpg";
-import sokurAppointment2 from "../projects/images/sokur-appointment2.jpg";
-import sokurAppointment3 from "../projects/images/sokur-appointment3.jpg";
+import quizletClone1 from "../projects/images/quizlet-clone1.png";
+import quizletClone2 from "../projects/images/quizlet-clone2.png";
+import quizletClone3 from "../projects/images/quizlet-clone3.png";
+import quizletClone4 from "../projects/images/quizlet-clone4.png";
+import quizletClone5 from "../projects/images/quizlet-clone5.png";
+import quizletClone6 from "../projects/images/quizlet-clone6.png";
+import quizletClone7 from "../projects/images/quizlet-clone7.png";
+import sokapp1 from "../projects/images/sokapp1.png";
+import sokapp2 from "../projects/images/sokapp2.png";
+import sokapp3 from "../projects/images/sokapp3.png";
 
 
 
@@ -27,7 +27,7 @@ export interface Project {
 
 const data : Project[] = [
   {
-    images: [sokurAppointment1, sokurAppointment2, sokurAppointment3],
+    images: [sokapp1, sokapp2, sokapp3],
     title: "SOKAPP",
     githubLink: "https://github.com/erpesh/sokur-appointment",
     link: "https://sokapp.vercel.app",
