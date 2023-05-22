@@ -10,10 +10,12 @@ import quizletClone7 from "../projects/images/quizlet-clone7.png";
 import sokapp1 from "../projects/images/sokapp1.png";
 import sokapp2 from "../projects/images/sokapp2.png";
 import sokapp3 from "../projects/images/sokapp3.png";
+import sokurantonDev1 from "../projects/images/sokuranton.dev1.png";
+import sokurantonDev2 from "../projects/images/sokuranton.dev2.png";
 
 
 
-export type Technology = "React" | "Python" | "Vue" | "Typescript" | "Next.js" | "PHP" | "Node.js" | "Firebase" | "Supabase" | "Stripe";
+export type Technology = "React" | "Python" | "Vue" | "Typescript" | "Next.js" | "PHP" | "Node.js" | "Firebase" | "Supabase" | "Stripe" | "TailwindCSS";
 
 export interface Project {
   images: string[]
@@ -27,12 +29,20 @@ export interface Project {
 
 const data : Project[] = [
   {
+    images: [sokurantonDev1, sokurantonDev2],
+    title: "sokuranton.dev",
+    githubLink: "https://github.com/erpesh/sokuranton.dev",
+    link: "https://www.sokuranton.dev",
+    technologiesUsed: ["Next.js", "Typescript", "TailwindCSS"],
+    description: "My personal portfolio website presents a collection of projects I have worked on. You can explore a diverse range of creative works that demonstrate my skills and expertise.",
+  },
+  {
     images: [sokapp1, sokapp2, sokapp3],
-    title: "SOKAPP",
+    title: "Sokapp",
     githubLink: "https://github.com/erpesh/sokur-appointment",
     link: "https://sokapp.vercel.app",
     technologiesUsed: ["Next.js", "Typescript", "Firebase", "Stripe"],
-    description: "Description",
+    description: "Sokapp is a platform where teachers can sell lessons and users can book them. Discover a wide range of subjects, connect with teachers, and enhance your learning journey.",
     inProgress: true
   },
   {
@@ -41,21 +51,21 @@ const data : Project[] = [
     githubLink: "https://github.com/erpesh/quizlet-clone",
     link: "https://erpesh.github.io/quizlet-clone",
     technologiesUsed: ["React", "Typescript", "Firebase"],
-    description: "Description"
+    description: "QuizletClone is my pet project, inspired by Quizlet. It's a user-friendly platform designed for learning and studying with digital flashcards. Dive into a vast collection of educational content, create your own interactive flashcards, and test your knowledge with fun quizzes."
   },
   {
     images: [reactChess],
     title: "React Chess",
     githubLink: "https://github.com/erpesh/react-chess",
     technologiesUsed: ["React", "Typescript", "Node.js"],
-    description: "Description"
+    description: "React Chess is an online multiplayer chess platform. Play against opponents worldwide, challenge friends, and enhance your skills through interactive gameplay."
   },
   {
     images: [justAnime],
     title: "JustAnime",
     githubLink: "https://github.com/erpesh/just-anime",
     technologiesUsed: ["React", "Python"],
-    description: "Description"
+    description: "JustAnime is a platform for anime fans, utilizing a public API to provide a wide range of anime titles, personalized lists, ratings, and reviews. It's the ideal destination to discover, track, and engage with the captivating world of anime."
   },
 ]
 

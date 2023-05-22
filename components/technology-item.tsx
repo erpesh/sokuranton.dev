@@ -8,7 +8,8 @@ import {
   SiNodedotjs,
   SiFirebase,
   SiSupabase,
-  SiStripe
+  SiStripe,
+  SiTailwindcss
 } from 'react-icons/si';
 import {IconType} from "react-icons";
 import {useTheme} from "next-themes";
@@ -73,6 +74,11 @@ const technologies: Record<Technology, ITechnology> = {
     icon: SiStripe,
     lightColor: "#6772E5",
     darkColor: "#1F2937",
+  },
+  "TailwindCSS": {
+    icon: SiTailwindcss,
+    lightColor: "#07B0CE",
+    darkColor: "#063629",
   },
 };
 

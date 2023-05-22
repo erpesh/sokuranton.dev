@@ -66,7 +66,7 @@ const getOptions = (theme: string | undefined, fullScreen: boolean = false) => {
           enable: true,
           area: 800,
         },
-        value: 50,
+        value: 60,
       },
       opacity: {
         value: 0.5,

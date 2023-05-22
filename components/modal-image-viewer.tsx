@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react';
 import {FaChevronLeft, FaChevronRight} from 'react-icons/fa';
 import Image from "next/image";
 import {AiOutlineClose} from "react-icons/all";
+import placeholderImage from "../app/placeholder.png";
 
 interface ModalImageViewerProps {
   images: string[]
@@ -63,6 +64,7 @@ const ModalImageViewer = ({images, isOpen, close}: ModalImageViewerProps) => {
             <Image
               src={images[currentImageIndex]}
               alt={`Project image ${currentImageIndex + 1}`}
+              placeholder={"blur"}
               className="image-view"
             />
             <div className="nav-btn-desk next-btn" onClick={handleNextImage}>
