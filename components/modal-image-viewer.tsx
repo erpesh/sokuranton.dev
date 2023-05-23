@@ -8,7 +8,7 @@ import {AiOutlineClose} from "react-icons/all";
 interface ModalImageViewerProps {
   images: string[]
   isOpen: boolean
-  close: () => voidn
+  close: () => void
 }
 
 const ModalImageViewer = ({images, isOpen, close}: ModalImageViewerProps) => {

@@ -7,6 +7,9 @@ import quizletClone4 from "../projects/images/quizlet-clone4.png";
 import quizletClone5 from "../projects/images/quizlet-clone5.png";
 import quizletClone6 from "../projects/images/quizlet-clone6.png";
 import quizletClone7 from "../projects/images/quizlet-clone7.png";
+import sentimentAnalysis1 from "../projects/images/sentiment-analysis1.png";
+import sentimentAnalysis2 from "../projects/images/sentiment-analysis2.png";
+import sentimentAnalysis3 from "../projects/images/sentiment-analysis3.png";
 import sokapp1 from "../projects/images/sokapp1.png";
 import sokapp2 from "../projects/images/sokapp2.png";
 import sokapp3 from "../projects/images/sokapp3.png";
@@ -44,6 +47,14 @@ const data : Project[] = [
     technologiesUsed: ["Next.js", "Typescript", "Firebase", "Stripe"],
     description: "Sokapp is a platform where teachers can sell lessons and users can book them. Discover a wide range of subjects, connect with teachers, and enhance your learning journey.",
     inProgress: true
+  },
+  {
+    images: [sentimentAnalysis1, sentimentAnalysis2, sentimentAnalysis3],
+    title: "SentimentAnalysis",
+    githubLink: "https://github.com/erpesh/sentiment-analysis-next",
+    link: "https://sentiment-analysis-next.vercel.app",
+    technologiesUsed: ["Next.js", "Typescript", "Supabase"],
+    description: "SentimentAnalysis is a powerful tool for product ratings, providing valuable insights into customer sentiments based on keywords managed by website administrators. Enhance products and improve user experiences with data-driven decision-making."
   },
   {
     images: [quizletClone1, quizletClone2, quizletClone3, quizletClone4, quizletClone5, quizletClone6, quizletClone7],
