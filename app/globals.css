@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -32,7 +33,7 @@
 /*}*/
 
 * {
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   transition: background .3s ease 0s;
 }
 body {

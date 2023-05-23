@@ -4,12 +4,11 @@ import {useEffect, useState} from 'react';
 import {FaChevronLeft, FaChevronRight} from 'react-icons/fa';
 import Image from "next/image";
 import {AiOutlineClose} from "react-icons/all";
-import placeholderImage from "../app/placeholder.png";
 
 interface ModalImageViewerProps {
   images: string[]
   isOpen: boolean
-  close: () => void
+  close: () => voidn
 }
 
 const ModalImageViewer = ({images, isOpen, close}: ModalImageViewerProps) => {
@@ -57,32 +56,26 @@ const ModalImageViewer = ({images, isOpen, close}: ModalImageViewerProps) => {
           <AiOutlineClose size={36}/>
         </div>
         <div className="image-viewer-content">
-          {images.length > 1 ? <>
-            <div className="nav-btn-desk prev-btn" onClick={handlePrevImage}>
-              <FaChevronLeft className="icon" size={36}/>
-            </div>
-            <Image
-              src={images[currentImageIndex]}
-              alt={`Project image ${currentImageIndex + 1}`}
-              placeholder={"blur"}
-              className="image-view"
-            />
-            <div className="nav-btn-desk next-btn" onClick={handleNextImage}>
-              <FaChevronRight className="icon" size={36}/>
-            </div>
-            <div className="nav-btn-container">
-              <div className="nav-btn-mob prev-btn" onClick={handlePrevImage}>
-                <FaChevronLeft className="icon" size={32}/>
-              </div>
-              <div className="nav-btn-mob next-btn" onClick={handleNextImage}>
-                <FaChevronRight className="icon" size={32}/>
-              </div>
-            </div>
-          </> : <Image
+          <div className="nav-btn-desk prev-btn" onClick={handlePrevImage}>
+            <FaChevronLeft className="icon" size={36}/>
+          </div>
+          <Image
             src={images[currentImageIndex]}
             alt={`Project image ${currentImageIndex + 1}`}
+            placeholder={"blur"}
             className="image-view"
-          />}
+          />
+          <div className="nav-btn-desk next-btn" onClick={handleNextImage}>
+            <FaChevronRight className="icon" size={36}/>
+          </div>
+          <div className="nav-btn-container">
+            <div className="nav-btn-mob prev-btn" onClick={handlePrevImage}>
+              <FaChevronLeft className="icon" size={32}/>
+            </div>
+            <div className="nav-btn-mob next-btn" onClick={handleNextImage}>
+              <FaChevronRight className="icon" size={32}/>
+            </div>
+          </div>
           <div className="absolute inset-0 flex items-end justify-end">
             <div className="number-imgs p-2.5 rounded-full mr-2 mb-2">
               {`${currentImageIndex + 1} / ${images.length}`}
