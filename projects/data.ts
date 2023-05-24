@@ -1,4 +1,8 @@
-import justAnime from '../projects/images/just-anime.jpg';
+import justAnime1 from '../projects/images/just-anime1.png';
+import justAnime2 from '../projects/images/just-anime2.png';
+import justAnime3 from '../projects/images/just-anime3.png';
+import justAnime4 from '../projects/images/just-anime4.png';
+import justAnime5 from '../projects/images/just-anime5.png';
 import reactChess from "../projects/images/react-chess1.png";
 import quizletClone1 from "../projects/images/quizlet-clone1.png";
 import quizletClone2 from "../projects/images/quizlet-clone2.png";
@@ -72,7 +76,7 @@ const data : Project[] = [
     description: "React Chess is an online multiplayer chess platform. Play against opponents worldwide, challenge friends, and enhance your skills through interactive gameplay."
   },
   {
-    images: [justAnime],
+    images: [justAnime1, justAnime2, justAnime3, justAnime4, justAnime5],
     title: "JustAnime",
     githubLink: "https://github.com/erpesh/just-anime",
     technologiesUsed: ["React", "Python"],
