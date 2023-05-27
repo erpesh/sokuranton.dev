@@ -4,6 +4,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import {Engine} from "tsparticles-engine";
 import {useTheme} from "next-themes";
+import { useWindowSize } from '@react-hookz/web';
 
 const getOptions = (theme: string | undefined, fullScreen: boolean = false) => {
 
@@ -91,11 +92,14 @@ interface Props {
 
 const ParticlesBackground = ({fullScreen} : Props) => {
 
+  const {width} = useWindowSize();
   const { theme, setTheme } = useTheme();
 
   const particlesInit = async (main: Engine) => {
     await loadFull(main);
   };
+
+  if (!fullScreen && width <= 400) return null;
 
   return (
       <Particles
