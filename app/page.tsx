@@ -21,17 +21,17 @@ const Page = () => {
         <span
           className={"sec-head"}><span>Software Engineer,</span><span>Web Developer,</span><span>University Student</span></span>
         <div className={"links-container gap-4 mt-4"}>
-          <a target="_blank" href="https://t.me/erpesh" rel="noopener noreferrer">
+          <a target="_blank" href="https://t.me/erpesh" rel="noopener noreferrer" aria-label={"Telegram"}>
             <FaTelegramPlane size={32}/>
           </a>
-          <a target="_blank" href="https://github.com/erpesh" rel="noopener noreferrer">
+          <a target="_blank" href="https://github.com/erpesh" rel="noopener noreferrer" aria-label={"GitHub"}>
             <FaGithub size={32}/>
           </a>
-          <a target="_blank" href="https://www.linkedin.com/in/anton-sokur-200298224" rel="noopener noreferrer">
+          <a target="_blank" href="https://www.linkedin.com/in/anton-sokur-200298224" rel="noopener noreferrer" aria-label={"LinkedIn"}>
             <FaLinkedin size={32}/>
           </a>
           <a target="_blank"
-             href={"mailto:anton.sokur1@gmail.com?subject=Hello%20there&body=I%20found%20your%20website%20and..."}>
+             href={"mailto:anton.sokur1@gmail.com?subject=Hello%20there&body=I%20found%20your%20website%20and..."} aria-label={"Email"}>
             <FaEnvelope size={32}/>
           </a>
         </div>
