@@ -1,8 +1,15 @@
 import {FaEnvelope, FaGithub, FaLinkedin, FaTelegramPlane} from 'react-icons/fa';
 import ParticlesBackground from "../components/particles-background";
+import {Metadata} from "next";
 
-export const metadata = {
-  title: "Home | Anton Sokur"
+export const metadata: Metadata = {
+  title: "Home | Anton Sokur",
+  description: "Anton Sokur's portfolio website - main page with contact information",
+  keywords: ["portfolio", "Anton Sokur", "Sokur", "web development", "front-end", "front-end developer", "front end", "front end developer", "profile"],
+  authors: {
+    name: "Anton Sokur"
+  },
+  robots: "index, follow"
 }
 
 const Page = () => {

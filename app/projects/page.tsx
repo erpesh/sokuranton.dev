@@ -3,7 +3,13 @@ import ProjectCard from "../../components/project-card";
 import data from "../../projects/data";
 
 export const metadata = {
-  title: "Projects | Anton Sokur"
+  title: "Projects | Anton Sokur",
+  description: "Anton Sokur's portfolio website showcasing projects",
+  keywords: ["portfolio", "Anton Sokur", "Sokur", "web development", "front-end", "front-end developer", "front end", "front end developer", "profile", "projects", "project", "react", "next.js", "typescript", "github"],
+  authors: {
+    name: "Anton Sokur"
+  },
+  robots: "index, follow"
 }
 
 const Page = () => {
