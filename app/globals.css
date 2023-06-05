@@ -208,7 +208,7 @@ body {
   }
 }
 .projects-head {
-  font-weight: 600;
+  font-weight: 500;
   padding: 1rem 0;
   border-bottom: 1px solid var(--foreground);
 }
