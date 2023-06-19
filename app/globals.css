@@ -298,14 +298,17 @@ body {
 .links-container {
   display: flex;
 }
-.links-container > a {
+.links-container > a,
+.links-container > button{
   padding: .3rem;
   border-radius: .25rem;
 }
-.links-container > a:hover {
+.links-container > a:hover,
+.links-container > button:hover {
   background: var(--foreground);
 }
-.links-container > a:hover > svg {
+.links-container > a:hover > svg,
+.links-container > button:hover > svg{
   fill: var(--background);
 }
 .to-projects {

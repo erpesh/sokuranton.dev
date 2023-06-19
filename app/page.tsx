@@ -1,8 +1,9 @@
-import {FaEnvelope, FaGithub, FaLinkedin, FaTelegramPlane} from 'react-icons/fa';
+import {FaEnvelope, FaGithub, FaLinkedin, FaRegAddressCard, FaTelegramPlane} from 'react-icons/fa';
 import ParticlesBackground from "../components/particles-background";
 import {Metadata} from "next";
 import {FiArrowRight} from "react-icons/all";
 import Link from "next/link";
+import CVButton from "../components/cv-button";
 
 export const metadata: Metadata = {
   title: "Home | Anton Sokur",
@@ -24,6 +25,7 @@ const Page = () => {
           <span>Software Engineer,</span><span>Web Developer,</span><span>University Student</span>
         </span>
         <div className={"links-container gap-4 mt-4"}>
+          <CVButton/>
           <a target="_blank" href="https://t.me/erpesh" rel="noopener noreferrer" aria-label={"Telegram"}>
             <FaTelegramPlane size={32}/>
           </a>
