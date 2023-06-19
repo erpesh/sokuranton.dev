@@ -1,4 +1,5 @@
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google'
 import NavBar from "../components/nav-bar";
 import RightSidebar from "../components/right-sidebar";
@@ -14,11 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      {/*suppressHydrationWarning={true}*/}
       <Providers>
         <NavBar/>
         <RightSidebar/>
         {children}
+        <Analytics />
       </Providers>
       </body>
     </html>
