@@ -36,6 +36,9 @@
   font-family: 'DM Sans', sans-serif;
   transition: background .3s ease 0s;
 }
+html {
+  overflow-y: scroll;
+}
 body {
   color: var(--foreground);
 }
@@ -243,6 +246,7 @@ body {
     font-size: 16px;
   }
 }
+/*content*/
 .content {
   color: var(--foreground);
   margin: 0 auto;
@@ -303,6 +307,20 @@ body {
 }
 .links-container > a:hover > svg {
   fill: var(--background);
+}
+.to-projects {
+  margin-top: 1rem;
+}
+.to-projects > a {
+  display: flex;
+  align-items: center;
+  border-radius: .6rem;
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 8px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  gap: 5px;
 }
 
 /*project card*/
