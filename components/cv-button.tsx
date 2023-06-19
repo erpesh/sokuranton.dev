@@ -6,7 +6,7 @@ const CVButton = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/cv.pdf';
+    link.href = '/Anton Sokur.pdf';
     link.setAttribute('download', 'Anton Sokur.pdf');
     document.body.appendChild(link);
     link.click();
