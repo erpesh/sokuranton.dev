@@ -19,13 +19,13 @@ import sokapp2 from "../projects/images/sokapp2.png";
 import sokapp3 from "../projects/images/sokapp3.png";
 import sokurantonDev1 from "../projects/images/sokuranton.dev1.png";
 import sokurantonDev2 from "../projects/images/sokuranton.dev2.png";
-
+import {StaticImageData} from "next/image";
 
 
 export type Technology = "React" | "Python" | "Vue" | "Typescript" | "Next.js" | "PHP" | "Node.js" | "Firebase" | "Supabase" | "Stripe" | "TailwindCSS";
 
 export interface Project {
-  images: string[]
+  images: StaticImageData[]
   title: string
   githubLink: string
   link?: string | undefined
@@ -35,6 +35,13 @@ export interface Project {
 }
 
 const data : Project[] = [
+  // {
+  //   images: [sokurantonDev1, sokurantonDev2],
+  //   title: "MH Telegram Bot",
+  //   githubLink: "https://github.com/erpesh/mh-telegram-bot",
+  //   technologiesUsed: ["Python"],
+  //   description: "A Telegram bot that facilitates communication between users and administrators. Features include handling user questions, admin chats, and more."
+  // },
   {
     images: [sokurantonDev1, sokurantonDev2],
     title: "sokuranton.dev",
@@ -50,7 +57,6 @@ const data : Project[] = [
     link: "https://sokapp.vercel.app",
     technologiesUsed: ["Next.js", "Typescript", "Firebase", "Stripe"],
     description: "Sokapp is a platform where teachers can sell lessons and users can book them. Discover a wide range of subjects, connect with teachers, and enhance your learning journey.",
-    inProgress: true
   },
   {
     images: [sentimentAnalysis1, sentimentAnalysis2, sentimentAnalysis3],
