@@ -5,7 +5,7 @@ import {ReactNode} from "react";
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
-    <ThemeProvider>
+    <ThemeProvider enableSystem>
       {children}
     </ThemeProvider>
   )

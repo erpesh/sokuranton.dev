@@ -2,11 +2,11 @@
 
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import {Engine} from "tsparticles-engine";
+import {Engine, ISourceOptions} from "tsparticles-engine";
 import {useTheme} from "next-themes";
 import { useWindowSize } from '@react-hookz/web';
 
-const getOptions = (theme: string | undefined, fullScreen: boolean = false) => {
+const getOptions = (theme: string | undefined, fullScreen: boolean = false) : ISourceOptions => {
 
   let color = "#000000";
   if (theme === "dark") color = "#ffffff";
@@ -53,7 +53,6 @@ const getOptions = (theme: string | undefined, fullScreen: boolean = false) => {
         enable: true,
       },
       move: {
-        directions: "none",
         enable: true,
         outModes: {
           default: "bounce", // "out"
@@ -93,7 +92,7 @@ interface Props {
 const ParticlesBackground = ({fullScreen} : Props) => {
 
   const {width} = useWindowSize();
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   const particlesInit = async (main: Engine) => {
     await loadFull(main);
@@ -104,7 +103,7 @@ const ParticlesBackground = ({fullScreen} : Props) => {
   return (
       <Particles
         init={particlesInit}
-        options={getOptions(theme, fullScreen)}
+        options={getOptions(resolvedTheme, fullScreen)}
         className={fullScreen ? "" : "container-bg"}
         canvasClassName={fullScreen ? "tsparticles-full-screen" : ""}
       />

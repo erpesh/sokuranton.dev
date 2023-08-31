@@ -1,4 +1,4 @@
-"use client"; // This is a client component 👈🏽
+"use client"
 
 import Link from "next/link";
 import { useTheme } from 'next-themes'
@@ -7,7 +7,7 @@ import RenderOnMount from "./render-on-mount";
 
 const NavBar = () => {
 
-  const {theme, setTheme} = useTheme();
+  const {resolvedTheme, setTheme} = useTheme();
 
   return (
     <nav className={"nav-container"}>
@@ -17,11 +17,11 @@ const NavBar = () => {
         <Link className={"nav-link"} href={"/projects"}>Projects</Link>
         <span
           className={"color-theme-switch"}
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
         >
           <RenderOnMount>
             <DarkModeSwitch
-              checked={theme === "dark"}
+              checked={resolvedTheme === "dark"}
               onChange={() => {}}
               size={24}
             />
