@@ -2,7 +2,7 @@
 
 import {FaExternalLinkAlt, FaGithub, FaImages} from 'react-icons/fa';
 import Image from "next/image";
-import {Project} from "../projects/data";
+import {Project} from "@/projects/data";
 import TechnologyItem from "./technology-item";
 import {RiToolsLine} from "react-icons/all";
 import {useState} from "react";

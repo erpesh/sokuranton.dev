@@ -2,11 +2,11 @@
 
 import {useEffect, useState} from 'react';
 import {FaChevronLeft, FaChevronRight} from 'react-icons/fa';
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import {AiOutlineClose} from "react-icons/all";
 
 interface ModalImageViewerProps {
-  images: string[]
+  images: StaticImageData[]
   isOpen: boolean
   close: () => void
 }

@@ -14,7 +14,7 @@ import {
 import {IconType} from "react-icons";
 import {useTheme} from "next-themes";
 import RenderOnMount from "./render-on-mount";
-import {Technology} from "../projects/data";
+import {Technology} from "@/projects/data";
 
 interface ITechnology {
   icon: IconType
@@ -84,7 +84,7 @@ const technologies: Record<Technology, ITechnology> = {
 
 
 interface Props {
-  tech: string
+  tech: Technology
 }
 
 const TechnologyItem = ({tech} : Props) => {
