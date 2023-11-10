@@ -1,34 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Portfolio Website
+
+This is my personal portfolio website, showcasing my skills, projects, and experience. The website is built using Next.js and styled with Tailwind CSS.
+
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Acknowledgments](#acknowledgments)
+
+## Features
+- Responsive design for various screen sizes.
+- Interactive and user-friendly layout.
+- Sections for showcasing skills, projects, and contact information.
+- Easy customization for personal branding.
+
+## Technologies Used
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React](https://reactjs.org/)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js installed on your machine.
 
+### Installation
+1. Clone the repository.
+   ```bash
+   git clone https://github.com/erpesh/sokuranton.dev.git
+   cd sokuranton.dev
+2. Install dependencies.
+   ```bash
+   npm install
+3. Run the development server.
+   ```bash
+   npm run dev
+The website will be accessible at http://localhost:3000.
+
+## Project structure
+The project structure is organized as follows:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+|-- app
+|-- components
+|-- projects
+    |-- images
+|-- public
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* app/: Contains Next.js routes.
+* components/: Reusable React components.
+* projects/: Data and images of portfolio projects.
+* public/: Static assets like images, fonts, CV, etc.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
+* Customize the content, styles, and sections on the pages to reflect your skills and experiences. 
+* Add your own projects by updating the data in the [/projects](projects) folder.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Deployment
+For deployment, I recommend using [Vercel](https://vercel.com). It's a free platform known for its simplicity and seamless integration with Next.js projects.
 
-## Learn More
+1. **Create a Vercel Account:**
+   If you don't have a Vercel account, [sign up here](https://vercel.com/signup).
 
-To learn more about Next.js, take a look at the following resources:
+2. **Deploy with Vercel:**
+   - Connect your GitHub repository to Vercel.
+   - Vercel will automatically detect your Next.js project configuration.
+   - Customize your deployment settings if needed.
+   - Deploy your portfolio.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   Your live portfolio will be accessible at the provided Vercel deployment URL.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Acknowledgments
 
-## Deploy on Vercel
+I would like to express my gratitude to the following resources and communities that have contributed to the development of this portfolio:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
