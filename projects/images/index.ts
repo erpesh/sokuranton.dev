@@ -19,7 +19,24 @@ import sokapp2 from "./sokapp2.webp";
 import sokapp3 from "./sokapp3.webp";
 import sokurantonDev1 from "./sokurantondev1.webp";
 import sokurantonDev2 from "./sokurantondev2.webp";
+import mfg1 from "./mfg1.webp";
+import mfg2 from "./mfg2.webp";
+import mfg3 from "./mfg3.webp";
+import mfg4 from "./mfg4.webp";
+import mfg5 from "./mfg5.webp";
+import mfg6 from "./mfg6.webp";
+import mfg7 from "./mfg7.webp";
 
+
+export const modernFitGymImages = [
+  mfg1,
+  mfg2,
+  mfg3,
+  mfg4,
+  mfg5,
+  mfg6,
+  mfg7
+]
 export const sokurantonDevImages = [
   sokurantonDev1,
   sokurantonDev2

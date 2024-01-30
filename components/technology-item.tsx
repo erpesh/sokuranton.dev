@@ -1,4 +1,4 @@
-"use client"; // This is a client component 👈🏽
+"use client";
 
 import { FaReact, FaVuejs, FaPhp } from 'react-icons/fa';
 import {
@@ -9,7 +9,8 @@ import {
   SiFirebase,
   SiSupabase,
   SiStripe,
-  SiTailwindcss
+  SiTailwindcss,
+  SiLaravel
 } from 'react-icons/si';
 import {IconType} from "react-icons";
 import {useTheme} from "next-themes";
@@ -79,6 +80,11 @@ const technologies: Record<Technology, ITechnology> = {
     icon: SiTailwindcss,
     lightColor: "#07B0CE",
     darkColor: "#063629",
+  },
+  "Laravel": {
+    icon: SiLaravel,
+    lightColor: "rgba(236,57,17,0.82)",
+    darkColor: "#242222",
   },
 };
 

@@ -1,6 +1,6 @@
 import {StaticImageData} from "next/image";
 import {
-  justAnimeImages,
+  justAnimeImages, modernFitGymImages,
   quicletCloneImages,
   reactChessImages,
   sentimentAnalysisImages,
@@ -9,7 +9,7 @@ import {
 } from "@/projects/images";
 
 
-export type Technology = "React" | "Python" | "Vue" | "Typescript" | "Next.js" | "PHP" | "Node.js" | "Firebase" | "Supabase" | "Stripe" | "TailwindCSS";
+export type Technology = "React" | "Python" | "Vue" | "Typescript" | "Next.js" | "PHP" | "Node.js" | "Firebase" | "Supabase" | "Stripe" | "TailwindCSS" | "Laravel";
 
 export interface Project {
   images: StaticImageData[]
@@ -29,6 +29,13 @@ const data : Project[] = [
   //   technologiesUsed: ["Python"],
   //   description: "A Telegram bot that facilitates communication between users and administrators. Features include handling user questions, admin chats, and more."
   // },
+  {
+    images: modernFitGymImages,
+    title: "Modern Fit Gym",
+    githubLink: "https://github.com/FarshadJahanfard/ModernFit-Gym-",
+    technologiesUsed: ["PHP", "Laravel"],
+    description: "Modern Fit changes how we stay fit with personalized workout plans, nutritional advice, and simple membership management. Trainers create custom plans, and members easily join classes, get nutritional details, and manage memberships without any hassle. The admin panel makes things run smoothly for efficient management."
+  },
   {
     images: sokurantonDevImages,
     title: "sokuranton.dev",
