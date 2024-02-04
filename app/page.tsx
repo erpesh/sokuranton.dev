@@ -6,9 +6,9 @@ import Link from "next/link";
 import CVButton from "../components/cv-button";
 
 export const metadata: Metadata = {
-  title: "Home | Anton Sokur",
-  description: "Anton Sokur's portfolio website - main page with contact information",
-  keywords: ["portfolio", "Anton Sokur", "Sokur", "web development", "front-end", "front-end developer", "front end", "front end developer", "profile"],
+  title: "Anton Sokur - Software Engineer Portfolio",
+  description: "A skilled software engineer specializing in web development. Contact me for innovative and dynamic web solutions.",
+  keywords: ["Anton Sokur", "Sokur", "Anton", "web developer", "Anton Sokur portfolio", "front-end development", "back-end development", "web development projects", "HTML", "CSS", "JavaScript", "React.js", "Next.js", "Software Engineer", "Software Engineering", "Student", "Anton Sokur contact"],
   authors: {
     name: "Anton Sokur"
   },
