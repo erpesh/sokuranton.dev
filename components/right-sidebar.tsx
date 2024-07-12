@@ -1,4 +1,4 @@
-"use client"; // This is a client component 👈🏽
+"use client";
 
 import {stack as Menu} from 'react-burger-menu';
 import {DarkModeSwitch} from "react-toggle-dark-mode";

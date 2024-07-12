@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-const RenderOnMount = ({ children }) => {
+const RenderOnMount = ({ children } : { children: React.ReactNode}) => {
   const [canRender, setCanRender] = useState(false);
 
   useEffect(() => {

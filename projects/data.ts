@@ -15,10 +15,10 @@ export interface Project {
   images: StaticImageData[]
   title: string
   githubLink: string
-  link?: string | undefined
+  link?: string
   technologiesUsed: Technology[]
   description: string
-  inProgress?: boolean | undefined
+  inProgress?: boolean
 }
 
 const data : Project[] = [

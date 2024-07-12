@@ -64,6 +64,7 @@ const ModalImageViewer = ({images, isOpen, close}: ModalImageViewerProps) => {
             alt={`Project image ${currentImageIndex + 1}`}
             placeholder={"blur"}
             className="image-view"
+            unoptimized
           />
           <div className="nav-btn-desk next-btn" onClick={handleNextImage}>
             <FaChevronRight className="icon" size={36}/>

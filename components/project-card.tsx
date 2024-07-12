@@ -28,7 +28,12 @@ const ProjectCard = ({project} : { project: Project }) => {
     <div className={"card-container"}>
       <ModalImageViewer images={images} isOpen={imageViewerOpen} close={closeImageViewer}/>
       <div className={"relative card-image cursor-pointer"} onClick={openImageViewer}>
-        <Image src={images[0]} alt={title} placeholder={"blur"}/>
+        <Image
+          src={images[0]}
+          alt={title}
+          placeholder={"blur"}
+          unoptimized
+        />
         {images.length > 1 && <div className="absolute inset-0 flex items-end justify-end">
           <div className="bg-gray-800 p-2 rounded-full mr-2 mb-2">
             <FaImages className="text-white text-xl"/>
