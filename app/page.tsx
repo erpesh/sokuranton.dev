@@ -1,9 +1,9 @@
-import {FaEnvelope, FaGithub, FaLinkedin, FaRegAddressCard, FaTelegramPlane} from 'react-icons/fa';
+import {FaEnvelope, FaGithub, FaLinkedin, FaTelegramPlane} from 'react-icons/fa';
 import ParticlesBackground from "../components/particles-background";
 import {Metadata} from "next";
 import {FiArrowRight} from "react-icons/all";
 import Link from "next/link";
-import CVButton from "../components/cv-button";
+import {Links} from "@/components/links";
 
 export const metadata: Metadata = {
   title: "Anton Sokur - Software Engineer Portfolio",
@@ -24,22 +24,7 @@ const Page = () => {
         <span className={"sec-head"}>
           <span>Software Engineer,</span><span>Web Developer,</span><span>University Student</span>
         </span>
-        <div className={"links-container gap-4 mt-4"}>
-          <CVButton/>
-          <a target="_blank" href="https://t.me/erpesh" rel="noopener noreferrer" aria-label={"Telegram"}>
-            <FaTelegramPlane size={32}/>
-          </a>
-          <a target="_blank" href="https://github.com/erpesh" rel="noopener noreferrer" aria-label={"GitHub"}>
-            <FaGithub size={32}/>
-          </a>
-          <a target="_blank" href="https://www.linkedin.com/in/anton-sokur-200298224" rel="noopener noreferrer" aria-label={"LinkedIn"}>
-            <FaLinkedin size={32}/>
-          </a>
-          <a target="_blank"
-             href={"mailto:anton.sokur1@gmail.com?subject=Hello%20there&body=I%20found%20your%20website%20and..."} aria-label={"Email"}>
-            <FaEnvelope size={32}/>
-          </a>
-        </div>
+        <Links/>
         <div className={"to-projects"}>
           <Link href={"/projects"}>My Projects <FiArrowRight size={26}/></Link>
         </div>

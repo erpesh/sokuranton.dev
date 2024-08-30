@@ -14,7 +14,11 @@ const CVButton = () => {
   };
 
   return (
-    <button onClick={handleDownloadCV}>
+    <button
+      onClick={handleDownloadCV}
+      data-tooltip-id="buttons"
+      data-tooltip-content="Download CV"
+    >
       <FaAddressCard size={32}/>
     </button>
   );
