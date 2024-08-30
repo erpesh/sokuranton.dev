@@ -26,7 +26,16 @@ import mfg4 from "./mfg4.webp";
 import mfg5 from "./mfg5.webp";
 import mfg6 from "./mfg6.webp";
 import mfg7 from "./mfg7.webp";
+import threeSquared1 from "./3squared1.webp";
+import threeSquared2 from "./3squared2.webp";
+import threeSquared3 from "./3squared3.webp";
 
+
+export const threeSquaredImages = [
+  threeSquared1,
+  threeSquared2,
+  threeSquared3
+]
 
 export const modernFitGymImages = [
   mfg1,

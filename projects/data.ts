@@ -1,6 +1,8 @@
 import {StaticImageData} from "next/image";
 import {
-  justAnimeImages, modernFitGymImages,
+  threeSquaredImages,
+  modernFitGymImages,
+  justAnimeImages,
   quicletCloneImages,
   reactChessImages,
   sentimentAnalysisImages,
@@ -22,13 +24,13 @@ export interface Project {
 }
 
 const data : Project[] = [
-  // {
-  //   images: [sokurantonDev1, sokurantonDev2],
-  //   title: "MH Telegram Bot",
-  //   githubLink: "https://github.com/erpesh/mh-telegram-bot",
-  //   technologiesUsed: ["Python"],
-  //   description: "A Telegram bot that facilitates communication between users and administrators. Features include handling user questions, admin chats, and more."
-  // },
+  {
+    images: threeSquaredImages,
+    title: "3Squared Train Map",
+    githubLink: "https://github.com/erpesh/3squared-train-map",
+    technologiesUsed: ["React"],
+    description: "As part of a university module with 3Squared, I worked in a team to develop a National Rail Network Map providing real-time freight train data across the UK. I contributed by integrating live train data, mapping locations, and implementing schedule comparison features."
+  },
   {
     images: modernFitGymImages,
     title: "Modern Fit Gym",
