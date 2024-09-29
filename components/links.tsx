@@ -1,7 +1,7 @@
 'use client'
 
 import CVButton from "@/components/cv-button";
-import {FaEnvelope, FaGithub, FaLinkedin, FaTelegramPlane} from "react-icons/fa";
+import {FaEnvelope, FaGithub, FaLinkedin} from "react-icons/fa";
 import {Tooltip} from "react-tooltip";
 
 
