@@ -19,7 +19,7 @@ export default function RootLayout({
         <NavBar/>
         <RightSidebar/>
         {children}
-        <Analytics />
+        <Analytics mode={'production'}/>
       </Providers>
       </body>
     </html>
