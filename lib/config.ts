@@ -2,7 +2,7 @@ const url = process.env.NEXT_PUBLIC_SITE_URL || "https://sokuranton.dev";
 const fullName = "Anton Sokur";
 
 export const siteConfig = {
-    name: `${fullName} - Software Engineer`,
+    title: `${fullName} - Software Engineer`,
     fullName: fullName,
     description:
         `Portfolio of ${fullName}, a software engineer specializing in web development and machine learning.`,
