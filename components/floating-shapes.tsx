@@ -1,56 +1,56 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 import { useFrame } from "@react-three/fiber"
-import { Float, Sphere, Box, Octahedron, Torus } from "@react-three/drei"
+// import { Float, Sphere, Box, Octahedron, Torus } from "@react-three/drei"
 import type * as THREE from "three"
+// import { useGLTF } from '@react-three/drei';
+
+// const hollowKnightModel = "models/hollow-knight.glb"
+// const cupheadModel = "models/cuphead.glb"
+// const phoenixPlanetModel = "models/planet_of_phoenix.glb"
+// const swFighterModel = "models/fighter.glb"
+
+// useGLTF.preload(hollowKnightModel)
 
 export default function FloatingShapes() {
   const groupRef = useRef<THREE.Group>(null)
+  const scrollY = useRef(0)
 
-  useFrame((state) => {
+  // const { scene: hollowKnightScene } = useGLTF(hollowKnightModel)
+  // const { scene: cupheadScene } = useGLTF(cupheadModel)
+  // const { scene: phoenixPlanetScene } = useGLTF(phoenixPlanetModel)
+  // const { scene: swFighterScene } = useGLTF(swFighterModel)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      scrollY.current = window.scrollY
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  useFrame(() => {
     if (groupRef.current) {
-      groupRef.current.rotation.y = state.clock.elapsedTime * 0.1
+      // Adjust the divisor for sensitivity
+      groupRef.current.rotation.y = scrollY.current * 0.002
     }
   })
 
   return (
     <group ref={groupRef}>
-      <Float speed={1.5} rotationIntensity={1} floatIntensity={2}>
-        <Sphere args={[0.5]} position={[-4, 2, -2]}>
-          <meshStandardMaterial color="#3b82f6" metalness={0.8} roughness={0.2} />
-        </Sphere>
+      {/* <Float speed={1.5} rotationIntensity={1} floatIntensity={2}>
+        <primitive object={hollowKnightScene} position={[2, 0, -3]} scale={0.5}/>
       </Float>
-
       <Float speed={2} rotationIntensity={1.5} floatIntensity={1.5}>
-        <Box args={[0.8, 0.8, 0.8]} position={[4, -1, -3]}>
-          <meshStandardMaterial color="#8b5cf6" metalness={0.6} roughness={0.3} />
-        </Box>
+        <primitive object={cupheadScene} position={[3, 3, -1]}/>
       </Float>
-
       <Float speed={1.8} rotationIntensity={2} floatIntensity={1.8}>
-        <Octahedron args={[0.6]} position={[-2, -2, -4]}>
-          <meshStandardMaterial color="#ec4899" metalness={0.7} roughness={0.1} />
-        </Octahedron>
+        <primitive object={phoenixPlanetScene} position={[-2, -1, -4]} scale={0.6}/>
       </Float>
-
-      <Float speed={1.2} rotationIntensity={0.8} floatIntensity={2.2}>
-        <Torus args={[0.6, 0.2, 16, 32]} position={[3, 3, -1]}>
-          <meshStandardMaterial color="#06b6d4" metalness={0.9} roughness={0.1} />
-        </Torus>
-      </Float>
-
       <Float speed={1.7} rotationIntensity={1.2} floatIntensity={1.3}>
-        <Sphere args={[0.3]} position={[0, 3, -5]}>
-          <meshStandardMaterial color="#f59e0b" metalness={0.5} roughness={0.4} />
-        </Sphere>
-      </Float>
-
-      <Float speed={2.2} rotationIntensity={1.8} floatIntensity={1.7}>
-        <Box args={[0.4, 1.2, 0.4]} position={[-3, 0, -1]}>
-          <meshStandardMaterial color="#10b981" metalness={0.6} roughness={0.2} />
-        </Box>
-      </Float>
+        <primitive object={swFighterScene} position={[-3, 0, -1]} scale={0.2}/>
+      </Float> */}
     </group>
   )
 }
