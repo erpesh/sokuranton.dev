@@ -42,7 +42,7 @@ export default function Portfolio() {
               {siteConfig.fullName}
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300">Software Engineer</p>
-            <div className="flex gap-4 justify-center">
+            <div className="flex md:flex-row flex-col gap-4 md:gap-2 justify-center items-center">
               <DefaultButton
                 icon={<Github className="h-4 w-4" />}
                 text={"GitHub"}

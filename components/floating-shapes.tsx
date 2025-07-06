@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useEffect } from "react"
+import { useRef } from "react"
 import { useFrame } from "@react-three/fiber"
 // import { Float, Sphere, Box, Octahedron, Torus } from "@react-three/drei"
 import type * as THREE from "three"
@@ -21,14 +21,6 @@ export default function FloatingShapes() {
   // const { scene: cupheadScene } = useGLTF(cupheadModel)
   // const { scene: phoenixPlanetScene } = useGLTF(phoenixPlanetModel)
   // const { scene: swFighterScene } = useGLTF(swFighterModel)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      scrollY.current = window.scrollY
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   useFrame(() => {
     if (groupRef.current) {
